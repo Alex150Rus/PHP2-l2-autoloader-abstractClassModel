@@ -12,6 +12,8 @@ namespace app\models;
 abstract class Model implements IModel
 {
 
+  abstract public function getTableName();
+
   function getOne($id)
   {
     $tableName = $this->getTableName();
