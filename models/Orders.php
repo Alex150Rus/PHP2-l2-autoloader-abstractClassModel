@@ -9,7 +9,16 @@
 namespace app\models;
 
 
-class Orders
+class Order extends Model
 {
+  public $id;
+  public $user;
+  public $address;
+  public $orderJson;
+  public $status;
 
+  public function getTableName(): string
+  {
+    return 'orders';
+  }
 }

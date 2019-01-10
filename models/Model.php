@@ -9,7 +9,20 @@
 namespace app\models;
 
 
-class Model
+abstract class Model implements IModel
 {
 
+  function getOne($id)
+  {
+    $tableName = $this->getTableName();
+    $sql = "SELECT * FROM {$tableName} WHERE id = {$id}";
+    echo "<br>$sql";
+  }
+
+  function getAll()
+  {
+    $tableName = $this->getTableName();
+    $sql = "SELECT * FROM {$tableName}";
+    echo "<br>$sql";
+  }
 }

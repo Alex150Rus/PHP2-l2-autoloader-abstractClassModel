@@ -9,7 +9,9 @@
 namespace app\models;
 
 
-class IModel
+interface IModel
 {
-
+function getOne($id);
+function getAll();
+function getTableName() :string;
 }
