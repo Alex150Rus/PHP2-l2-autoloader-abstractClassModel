@@ -12,11 +12,11 @@ class Autoloader
 {
   public function loadClass($className)
   {
-    $fileRoute = substr($className, 4);
-    $fullFileRoute = $_SERVER['DOCUMENT_ROOT'] . "/../" . "{$fileRoute}.php";
+    $className = str_replace(["app\\", "\\"],[$_SERVER['DOCUMENT_ROOT'] . "/../" , "/"], $className);
+    $className .= ".php";
 
-    if (file_exists($fullFileRoute)) {
-      include $fullFileRoute;
+    if (file_exists($className)) {
+      include $className;
     }
   }
 }
