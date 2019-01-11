@@ -12,8 +12,8 @@ class Autoloader
 {
   public function loadClass($className)
   {
-    $fileRoute = substr($className, 4);
-    $fullFileRoute = $_SERVER['DOCUMENT_ROOT'] . "\\{$fileRoute}.php";
+    $fileRoute = substr($className, 3);
+    $fullFileRoute = $_SERVER['DOCUMENT_ROOT'] . "{$fileRoute}.php";
 
     if (file_exists($fullFileRoute)) {
       include $fullFileRoute;
