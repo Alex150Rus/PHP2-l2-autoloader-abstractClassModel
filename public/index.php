@@ -1,6 +1,7 @@
 <?php
 
 include ('../services/Autoloader.php');
+include ('../config/main.php');
 use app\services\Autoloader;
 use app\models\Product;
 use app\models\User;
