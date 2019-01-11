@@ -7,13 +7,12 @@
  */
 
 namespace app\models;
+
 use app\interfaces\IModel;
 
 
 abstract class Model implements IModel
 {
-
-  abstract public function getTableName();
 
   function getOne($id)
   {
