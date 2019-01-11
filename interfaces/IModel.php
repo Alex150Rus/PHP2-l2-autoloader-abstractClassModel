@@ -6,7 +6,7 @@
  * Time: 0:12
  */
 
-namespace app\models;
+namespace app\interfaces;
 
 
 interface IModel
