@@ -14,7 +14,7 @@ use app\interfaces\IModel;
 abstract class Model implements IModel
 {
 
-  function getOne($id)
+  function getOne(int $id)
   {
     $tableName = $this->getTableName();
     $sql = "SELECT * FROM {$tableName} WHERE id = {$id}";

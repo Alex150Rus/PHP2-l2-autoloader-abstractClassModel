@@ -11,7 +11,7 @@ namespace app\interfaces;
 
 interface IModel
 {
-  function getOne($id);
+  function getOne(int $id);
 
   function getAll();
 
